@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import RootStack from "./src/navigation/RootStack";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello world</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <RootStack />;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'tomato',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "tomato",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
