@@ -14,4 +14,10 @@ type HomeStackParamList = {
 type RootStackParamList = {
   homeStack: undefined;
   tabStack: undefined;
+  topTabStack : undefined;
 };
+
+type TopTabParamList = {
+  dashboard: undefined;
+  setting: undefined;
+}

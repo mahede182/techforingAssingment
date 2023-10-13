@@ -1,12 +1,38 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { CustomHeader } from "../components";
+import { Card, CustomHeader, Tab } from "../components";
 
+import { Dimensions } from "react-native";
+
+console.log({
+  width: Dimensions.get("window").width / 390,
+  height: Dimensions.get("window").height,
+});
 const HomeScreen: React.FC = (): JSX.Element => {
   return (
     <View style={styles.container}>
       <CustomHeader />
-      <Text style={{color: "#ffffff"}}>HomeScreen</Text>
+      <Tab />
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Card />
+        <Card />
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Card />
+        <Card />
+      </View>
     </View>
   );
 };
@@ -17,5 +43,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#2A2D32",
+    padding: 24
   },
 });
