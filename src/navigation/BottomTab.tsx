@@ -30,7 +30,7 @@ const BottomTab: React.FC = () => {
           // borderTopWidth: 5
         },
       }}
-      initialRouteName="notification"
+      initialRouteName="setting"
     >
       <Tab.Screen
         options={{

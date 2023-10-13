@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Card, CustomHeader, Tab } from "../components";
+import { Card, CustomHeader, Tab, Wificard } from "../components";
 
 import { Dimensions } from "react-native";
 
@@ -13,6 +13,7 @@ const HomeScreen: React.FC = (): JSX.Element => {
     <View style={styles.container}>
       <CustomHeader />
       <Tab />
+      <Wificard />
       <View
         style={{
           flexDirection: "row",
