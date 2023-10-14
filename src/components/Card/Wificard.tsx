@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Text, View, Platform } from "react-native";
+import { exerptData } from "../../constants/data";
 import React from "react";
 import Exerpt from "./Exerpt";
 import Bar from "../Barchart/Bar";
@@ -23,14 +24,24 @@ const Wifecard: React.FC = (): JSX.Element => {
       </View>
       <View style={{ flexDirection: "row" }}>
         <View style={styles.exerptContainer}>
-          <Exerpt />
-          <Exerpt />
-          <Exerpt />
+          {/* {exerptData.map((exerpt) => (
+            <Exerpt
+              id={exerpt.id}
+              lExerpt={exerpt.lExerpt}
+              rExerpt={exerpt.rExerpt}
+              color={exerpt.color}
+            />
+          ))}
+        </View> */}
+          <Exerpt lExerpt="Wifi Name" rExerpt="TechForing" color="#F6DB56" />
+          <Exerpt lExerpt="Network" rExerpt="Monitoring" color="#fafafa" />
+          <Exerpt lExerpt="Firewall" rExerpt="Active" color="#fafafa" />
         </View>
-        <View style={{ width: 159, padding: 5 }}>
-          <Exerpt />
-          <Exerpt />
-          <Exerpt />
+        <View
+          style={{width: '48%', paddingLeft: 10}}
+        >
+          <Exerpt lExerpt="Network type" rExerpt="Public" color="#F6DB56" />
+          <Exerpt lExerpt="Protocol" rExerpt="WPA" color="#fafafa" />
         </View>
       </View>
       <Devider />
@@ -44,7 +55,7 @@ export default Wifecard;
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: "40%",
+    height: "48%",
     paddingHorizontal: 12,
     paddingTop: 12,
     paddingBottom: 24,
@@ -68,6 +79,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingVertical: 16
   },
   headerStyle: {
     flexDirection: "row",
@@ -101,8 +113,8 @@ const styles = StyleSheet.create({
     paddingRight: 6,
   },
   exerptContainer: {
-    width: 159,
-    padding: 5,
+    width: "48%",
+    paddingHorizontal: 5,
     borderRightWidth: 1,
     borderRightColor: "#F6DB56",
   },

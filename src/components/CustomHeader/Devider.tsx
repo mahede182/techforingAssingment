@@ -9,7 +9,7 @@ const Devider: React.FC = (): JSX.Element => {
         width: "95%",
         backgroundColor: "#F6DB56",
         alignSelf: "center",
-        marginVertical: 12
+        marginVertical: 16,
       }}
     ></View>
   );

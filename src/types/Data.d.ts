@@ -1,4 +1,4 @@
-import { ImageSourcePropType } from 'react-native';
+import { ImageSourcePropType } from "react-native";
 export interface Tresult {
   id: number | string;
   title: string;
@@ -10,4 +10,11 @@ export interface TOptionData {
   imgSource: string | any;
   title: string;
   exerpt: string;
+}
+
+export interface TExerptData {
+  id?: number;
+  lExerpt: string;
+  rExerpt: string;
+  color?: string;
 }

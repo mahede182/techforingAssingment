@@ -1,11 +1,16 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const Card: React.FC = (): JSX.Element => {
+type Props = {
+  count: number;
+  title: string;
+};
+
+const Card: React.FC<Props> = ({ count, title }: Props): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text style={styles.numTextStyle}>0</Text>
-      <Text style={styles.titleStyle}>Malicious Website</Text>
+      <Text style={styles.numTextStyle}>{count}</Text>
+      <Text style={styles.titleStyle}>{title}</Text>
     </View>
   );
 };
@@ -15,13 +20,13 @@ export default Card;
 const styles = StyleSheet.create({
   container: {
     height: 120,
-    width: '48%',
+    width: "48%",
     backgroundColor: "#75777b",
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     borderRadius: 5,
     marginTop: 24,
-    shadowColor: 'rgba(0, 0, 0, 0.75)',
+    shadowColor: "rgba(0, 0, 0, 0.75)",
     shadowOffset: {
       width: 4.5066,
       height: 4.5066,
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
     elevation: 4.5066,
   },
   numTextStyle: {
-    fontFamily: 'PoppinsBold',
+    fontFamily: "PoppinsBold",
     color: "#F6DB56",
     fontSize: 24,
     fontStyle: "normal",
@@ -44,6 +49,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontStyle: "normal",
     fontWeight: "normal",
-    paddingTop: 12
+    paddingTop: 12,
   },
 });

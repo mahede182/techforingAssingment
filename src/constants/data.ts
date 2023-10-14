@@ -1,5 +1,6 @@
 import { Tresult } from "../types/Data";
 import { TOptionData } from "../types/Data";
+import { TExerptData } from "../types/Data";
 export const result: Tresult[] = [
   {
     id: 0,
@@ -66,5 +67,11 @@ export const OptionData: TOptionData[] = [
     title: "Ad Blocker",
     exerpt: "Black any unwanted Ads",
   },
-  
+];
+export const exerptData: TExerptData[] = [
+  { id: 0, lExerpt: "Wifi Name", rExerpt: "TechForing", color: "#F6DB56" },
+  { id: 1, lExerpt: "Network", rExerpt: "Monitoring", color: "#FAFAFA" },
+  { id: 2, lExerpt: "Firewall", rExerpt: "Active", color: "#FAFAFA" },
+  { id: 3, lExerpt: "Network Type", rExerpt: "Public", color: "#F6DB56" },
+  { id: 4, lExerpt: "Protect", rExerpt: "WPA", color: "#FAFAFA" },
 ];

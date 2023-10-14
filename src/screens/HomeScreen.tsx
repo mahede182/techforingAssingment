@@ -19,22 +19,23 @@ const HomeScreen: React.FC = (): JSX.Element => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
-          width: '100%',
+          flexWrap: 'wrap',
+          width: "100%",
         }}
       >
-        <Card />
-        <Card />
-      </View>
+        <Card count={0} title="Malicious Website" />
+        <Card count={13} title="Ad Blocked" />
+        {/* </View>
       <View
         style={{
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
           width:'100%'
-        }}
-      >
-        <Card />
-        <Card />
+        }} 
+      >*/}
+        <Card count={6} title="Unwanted codes in QR" />
+        <Card count={1} title="Phishing/Scam" />
       </View>
     </View>
   );
@@ -46,6 +47,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#2A2D32",
-    padding: 24
+    padding: 24,
   },
 });
