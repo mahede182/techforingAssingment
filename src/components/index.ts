@@ -6,4 +6,4 @@ export { default as Scan } from "./Scan/Scan";
 export { default as Tab } from "./CustomHeader/Tab";
 export { default as Wificard } from "./Card/Wificard";
 export { default as Bar } from "./Barchart/Bar";
-
+export { default as Caution } from "./Settings/Caution";

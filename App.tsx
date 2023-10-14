@@ -2,8 +2,13 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import RootStack from "./src/navigation/RootStack";
 import { SafeAreaProvider, SafeAreaView, initialWindowMetrics } from "react-native-safe-area-context";
+import { useFonts } from 'expo-font';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Poppins': require('./src/assets/fonts/Poppins.ttf'),
+    'PoppinsBold': require('./src/assets/fonts/PoppinsBold.ttf')
+  });
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <SafeAreaView style={styles.container}>

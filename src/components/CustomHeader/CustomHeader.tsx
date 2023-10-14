@@ -17,6 +17,7 @@ export default CustomHeader;
 
 const styles = StyleSheet.create({
   container: {
+    width: '95%',
     flexDirection: "row",
     alignItems: "center",
     marginHorizontal: 16
@@ -27,9 +28,11 @@ const styles = StyleSheet.create({
     marginTop: 8
   },
   textStyle: {
+    fontFamily: 'Poppins',
     fontStyle: "normal",
+    fontWeight: '700',
     fontSize: 18,
-    lineHeight: 27,
+    left: -24,
     alignSelf: "center",
     color: "#F6DB56B2",
     marginLeft: 160

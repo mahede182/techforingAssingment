@@ -60,4 +60,11 @@ export const OptionData: TOptionData[] = [
     title: "QR Code Scanner",
     exerpt: "Scan any unwanted codes before take you in",
   },
+  {
+    id: 6,
+    imgSource: require("../assets/settingIcon/adBlocker.png"),
+    title: "Ad Blocker",
+    exerpt: "Black any unwanted Ads",
+  },
+  
 ];

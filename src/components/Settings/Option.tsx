@@ -16,28 +16,11 @@ const Option: React.FC<TOptionData> = ({
     setIsEnabled((previousState: boolean) => !previousState);
   // console.log(isEnabled,"=== isEnable")
   return (
-    <View key={id} style={{ paddingVertical: 5 }}>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-          paddingHorizontal: 12,
-        }}
-      >
+    <View key={id}>
+      <View style={styles.container}>
         <View style={{ flexDirection: "row" }}>
           <Image source={imgSource} />
-          <Text
-            style={{
-              paddingLeft: 8,
-              color: "#F6DB56B2",
-              fontSize: 14,
-              fontStyle: "normal",
-              fontWeight: "400",
-            }}
-          >
-            {title}
-          </Text>
+          <Text style={styles.textStyle}>{title}</Text>
         </View>
         {/* <Switch
             trackColor={{ false: "#767577", true: "#767577" }}
@@ -57,8 +40,7 @@ const Option: React.FC<TOptionData> = ({
           backgroundInactive={"#767577"}
           circleActiveColor={"#F6DB56B2"}
           circleInActiveColor={"#ffffff"}
-          // renderInsideCircle={() => <CustomComponent />} // custom component to render inside the Switch circle (Text, Image, etc.)
-          changeValueImmediately={true} // if rendering inside circle, change state immediately or wait for animation to complete
+          changeValueImmediately={true}
           innerCircleStyle={{
             alignItems: "center",
             justifyContent: "center",
@@ -72,21 +54,35 @@ const Option: React.FC<TOptionData> = ({
           switchBorderRadius={30}
         />
       </View>
-      <Text
-        style={{
-          fontSize: 10,
-          fontStyle: "normal",
-          fontWeight: "400",
-          paddingHorizontal: 12,
-          color: "#fafafa",
-        }}
-      >
-        {exerpt}
-      </Text>
+      <Text style={styles.exerpt}>{exerpt}</Text>
       <Devider />
     </View>
   );
 };
 export default Option;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 12,
+  },
+  textStyle: {
+    fontFamily: 'Poppins',
+    paddingLeft: 8,
+    color: "#F6DB56B2",
+    fontSize: 14,
+    fontStyle: "normal",
+    fontWeight: "400",
+  },
+  exerpt: {
+    fontFamily: 'Poppins',
+    fontSize: 10,
+    fontStyle: "normal",
+    fontWeight: "400",
+    paddingHorizontal: 12,
+    paddingTop: 8,
+    color: "#fafafa",
+  },
+});

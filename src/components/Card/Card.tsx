@@ -14,26 +14,36 @@ export default Card;
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
-    width: 165,
-    backgroundColor: "#00ffff",
+    height: 120,
+    width: '48%',
+    backgroundColor: "#75777b",
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    margin: 12
+    marginTop: 24,
+    shadowColor: 'rgba(0, 0, 0, 0.75)',
+    shadowOffset: {
+      width: 4.5066,
+      height: 4.5066,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 9.0132,
+    elevation: 4.5066,
   },
   numTextStyle: {
+    fontFamily: 'PoppinsBold',
     color: "#F6DB56",
     fontSize: 24,
     fontStyle: "normal",
-    fontWeight: "700",
+    fontWeight: "normal",
     // lineHeight: normal,
   },
   titleStyle: {
+    fontFamily: "Poppins",
     color: "#fafafa",
     fontSize: 12,
     fontStyle: "normal",
-    fontWeight: "400",
+    fontWeight: "normal",
     paddingTop: 12
   },
 });

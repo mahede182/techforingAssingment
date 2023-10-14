@@ -18,7 +18,8 @@ const HomeScreen: React.FC = (): JSX.Element => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
+          width: '100%',
         }}
       >
         <Card />
@@ -28,7 +29,8 @@ const HomeScreen: React.FC = (): JSX.Element => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
+          width:'100%'
         }}
       >
         <Card />

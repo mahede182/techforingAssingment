@@ -3,9 +3,8 @@ import React from "react";
 
 const NotificationScreen: React.FC = (): JSX.Element => {
   return (
-    <View>
-      <Text>NotificationScreen</Text>
-    </View>
+    // <VicotyBar />
+    <View></View>
   );
 };
 

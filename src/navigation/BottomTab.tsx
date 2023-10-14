@@ -95,10 +95,10 @@ const BottomTab: React.FC = () => {
                 borderRadius: 80,
                 top: -35,
                 borderColor: "rgba(0, 0, 0, 0.45)",
-                borderWidth: 5
+                borderWidth: 5,
               }}
             >
-              <Text style={{ color: "#FCE977" }}>Scan</Text>
+              <Text style={styles.scanText}>Scan</Text>
             </View>
           ),
         }}
@@ -157,5 +157,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 3.5,
     elevation: 5,
+  },
+  scanText: {
+    fontFamily: "PoppinsBold",
+    color: "#F6DB56",
+    fontSize: 18,
+    fontStyle: "normal",
+    fontWeight: "normal",
   },
 });

@@ -6,10 +6,10 @@ const Devider: React.FC = (): JSX.Element => {
     <View
       style={{
         height: 0.5,
-        width: "90%",
+        width: "95%",
         backgroundColor: "#F6DB56",
-        marginTop: 5,
         alignSelf: "center",
+        marginVertical: 12
       }}
     ></View>
   );

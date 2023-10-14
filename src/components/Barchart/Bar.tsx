@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { BarChart,StackedBarChart } from "react-native-chart-kit";
+import { BarChart, LineChart, StackedBarChart } from "react-native-chart-kit";
 
 const Bar = () => {
   // const chartConfig = {
@@ -26,19 +26,27 @@ const Bar = () => {
     },
   };
 
-  const data = {
+  const data1 = {
     labels: ["7 May", "08 May", "9 May", "10 May", "11 May"],
     legend: ["Incoming", "Outgoing"],
     data: [
       [900, 510],
       [480, 760],
-      [10,720],
-      [710,0],
-      [500,480]
+      [10, 720],
+      [710, 0],
+      [500, 480],
     ],
-    barColors: ["#F6DB56", "#FAFAFA"]
+    barColors: ["#F6DB56", "#FAFAFA"],
   };
 
+  const data = {
+    datasets: [
+      { data: [900, 480, 10, 710, 500], color: () => "#C7EBFF", strokeWidth: 4 },
+      { data: [510, 760, 720, 0, 480], color: () => "#ED7C33" },
+    ],
+    labels: ["7 May", "08 May", "9 May", "10 May", "11 May"],
+    legend: ["Incoming", "Outgoing"],
+  };
   const chartConfig = {
     backgroundGradientFrom: "#1E2923",
     backgroundGradientFromOpacity: 0,
@@ -50,7 +58,7 @@ const Bar = () => {
     useShadowColorFromDataset: false, // optional
   };
   return (
-    <StackedBarChart
+    <LineChart
       style={graphStyle}
       data={data}
       width={318}

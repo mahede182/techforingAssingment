@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, Platform } from "react-native";
 import React from "react";
 import Exerpt from "./Exerpt";
 import Bar from "../Barchart/Bar";
@@ -22,14 +22,7 @@ const Wifecard: React.FC = (): JSX.Element => {
         </View>
       </View>
       <View style={{ flexDirection: "row" }}>
-        <View
-          style={{
-            width: 159,
-            padding: 5,
-            borderRightWidth: 1,
-            borderRightColor: "#F6DB56",
-          }}
-        >
+        <View style={styles.exerptContainer}>
           <Exerpt />
           <Exerpt />
           <Exerpt />
@@ -50,11 +43,27 @@ export default Wifecard;
 
 const styles = StyleSheet.create({
   container: {
-    width: 342,
-    height: 316,
-    padding: 12,
-    backgroundColor: "red",
+    width: "100%",
+    height: "40%",
+    paddingHorizontal: 12,
+    paddingTop: 12,
+    paddingBottom: 24,
+    marginVertical: 24,
     alignSelf: "center",
+    backgroundColor: "#303337",
+    borderRadius: 10,
+    ...Platform.select({
+      ios: {
+        shadowColor: "rgba(0, 0, 0, 0.50)",
+        shadowOffset: { width: -4.5066, height: -4.5066 },
+        shadowOpacity: 1,
+        shadowRadius: 9.0132,
+      },
+      android: {
+        elevation: 4,
+        shadowColor: "rgba(0, 0, 0, 0.75)",
+      },
+    }),
   },
   headerContainer: {
     flexDirection: "row",
@@ -76,17 +85,25 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   title: {
+    fontFamily: "PoppinsBold",
     paddingLeft: 12,
     fontSize: 18,
     fontStyle: "normal",
-    fontWeight: "700",
+    fontWeight: "normal",
     color: "#F6DB56B2",
   },
   subtitle: {
+    fontFamily: "Poppins",
     fontSize: 10,
     fontStyle: "normal",
     fontWeight: "400",
     color: "#fafafa",
     paddingRight: 6,
+  },
+  exerptContainer: {
+    width: 159,
+    padding: 5,
+    borderRightWidth: 1,
+    borderRightColor: "#F6DB56",
   },
 });

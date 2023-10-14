@@ -18,28 +18,29 @@ export default Tab;
 
 const styles = StyleSheet.create({
   container: {
-    width: 342,
-    height: 49,
+    width: "100%",
+    height: 55,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     borderRadius: 50,
     alignSelf: "center",
-
-    backgroundColor: "red",
+    marginTop: 20,
+    backgroundColor: "#484b4e",
   },
   activeTab: {
-    width: 163,
-    height: 37,
+    width: '40%',
+    height: 45,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "green",
+    backgroundColor: "#24262a",
     paddingVertical: 8,
     paddingHorizontal: 12,
     margin: 6,
     borderRadius: 100,
   },
   textStyle: {
+    fontFamily: 'Poppins',
     color: "#F6DB56B2",
     fontSize: 14,
     fontStyle: "normal",
@@ -47,8 +48,8 @@ const styles = StyleSheet.create({
     textAlign:'center',
   },
   inactiveTab: {
-    width: 163,
-    height: 37,
+    width: '40%',
+    height: 45,
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 8,
