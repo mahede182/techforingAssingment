@@ -4,10 +4,16 @@ import React from "react";
 import Exerpt from "./Exerpt";
 import GBar from "../Barchart/GBar";
 import Devider from "../CustomHeader/Devider";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Wifecard: React.FC = (): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#2A2D32", "#131313"]}
+      start={{ x: 1, y: 0 }}
+      end={{ x: 0, y: 0 }}
+      style={styles.container}
+    >
       <View style={styles.headerContainer}>
         <View style={styles.headerStyle}>
           <Image
@@ -24,29 +30,18 @@ const Wifecard: React.FC = (): JSX.Element => {
       </View>
       <View style={{ flexDirection: "row" }}>
         <View style={styles.exerptContainer}>
-          {/* {exerptData.map((exerpt) => (
-            <Exerpt
-              id={exerpt.id}
-              lExerpt={exerpt.lExerpt}
-              rExerpt={exerpt.rExerpt}
-              color={exerpt.color}
-            />
-          ))}
-        </View> */}
           <Exerpt lExerpt="Wifi Name" rExerpt="TechForing" color="#F6DB56" />
           <Exerpt lExerpt="Network" rExerpt="Monitoring" color="#fafafa" />
           <Exerpt lExerpt="Firewall" rExerpt="Active" color="#fafafa" />
         </View>
-        <View
-          style={{width: '48%', paddingLeft: 10}}
-        >
+        <View style={{ width: "48%", paddingLeft: 10 }}>
           <Exerpt lExerpt="Network type" rExerpt="Public" color="#F6DB56" />
           <Exerpt lExerpt="Protocol" rExerpt="WPA" color="#fafafa" />
         </View>
       </View>
       <Devider />
       <GBar />
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -79,7 +74,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingVertical: 16
+    paddingVertical: 16,
   },
   headerStyle: {
     flexDirection: "row",

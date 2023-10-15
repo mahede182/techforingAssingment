@@ -1,11 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { CustomHeader } from "../components";
+import { LinearGradient } from "expo-linear-gradient";
 
 const ProfileScreen: React.FC = (): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#2A2D32", "#050505"]}
+      start={{ x: 1, y: 0 }}
+      end={{ x: 0, y: 0 }}
+      style={styles.container}
+    >
+      <CustomHeader />
       <Text style={styles.textStyle}>ProfileScreen</Text>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -15,7 +23,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
     backgroundColor: "#2A2D32",
     padding: 24,
   },

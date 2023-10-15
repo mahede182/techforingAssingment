@@ -8,6 +8,7 @@ import {
   SettingScreen,
 } from "../screens";
 import { Scan } from "../components";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -85,11 +86,14 @@ const BottomTab: React.FC = () => {
         component={Scan}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View
+            <LinearGradient
+              colors={["rgb(84, 86, 89)", "rgb(35, 38, 41)"]}
+              start={{ x: 0.25, y: 0.26 }}
+              end={{ x: 1, y: 0.5 }}
               style={{
                 height: 90,
                 width: 90,
-                backgroundColor: "rgb(84, 86, 89)",
+                // backgroundColor: "rgb(84, 86, 89)",
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: 80,
@@ -99,7 +103,7 @@ const BottomTab: React.FC = () => {
               }}
             >
               <Text style={styles.scanText}>Scan</Text>
-            </View>
+            </LinearGradient>
           ),
         }}
       />

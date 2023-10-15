@@ -5,17 +5,6 @@ import { Dimensions } from "react-native";
 
 const Bar = () => {
   const screenWidth = Dimensions.get("window").width * 0.95;
-  // const chartConfig = {
-  //     {
-  //         backgroundColor: '#000000',
-  //         backgroundGradientFrom: '#1E2923',
-  //         backgroundGradientTo: '#08130D',
-  //         color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-  //         style: {
-  //           borderRadius: 16
-  //         }
-  //       }
-  // },
   const graphStyle = {
     marginVertical: 8,
     padding: 10,

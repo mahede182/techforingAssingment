@@ -13,13 +13,24 @@ import { Caution, CustomHeader, Devider, Option, Tab } from "../components";
 import CustomSwitch from "../components/CustomHeader/CustomSwitch";
 import { OptionData } from "../constants/data";
 import { TOptionData } from "../types/Data";
+import { LinearGradient } from "expo-linear-gradient";
 
 const SettingScreen: React.FC = (): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#2A2D32", "#050505"]}
+      start={{ x: 1, y: 0 }}
+      end={{ x: 0, y: 0 }}
+      style={styles.container}
+    >
       <CustomHeader />
       <Tab />
-      <View style={styles.wrapOption}>
+      <LinearGradient
+        colors={["#2A2D32", "#131313"]}
+        start={{ x: 1, y: 0 }}
+        end={{ x: 0, y: 1 }}
+        style={styles.wrapOption}
+      >
         <FlatList
           data={OptionData}
           renderItem={({ item }) => (
@@ -31,9 +42,9 @@ const SettingScreen: React.FC = (): JSX.Element => {
             />
           )}
         />
-      </View>
+      </LinearGradient>
       <Caution />
-    </View>
+    </LinearGradient>
   );
 };
 

@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { LinearGradient } from "expo-linear-gradient";
 
 type Props = {
   count: number;
@@ -8,10 +9,15 @@ type Props = {
 
 const Card: React.FC<Props> = ({ count, title }: Props): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#2A2D32", "#131313"]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 0, y: 1 }}
+      style={styles.container}
+    >
       <Text style={styles.numTextStyle}>{count}</Text>
       <Text style={styles.titleStyle}>{title}</Text>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -26,7 +32,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 5,
     marginTop: 24,
-    shadowColor: "rgba(0, 0, 0, 0.75)",
+    shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 4.5066,
       height: 4.5066,
