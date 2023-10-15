@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View, Platform } from "react-native";
 import { exerptData } from "../../constants/data";
 import React from "react";
 import Exerpt from "./Exerpt";
-import Bar from "../Barchart/Bar";
+import GBar from "../Barchart/GBar";
 import Devider from "../CustomHeader/Devider";
 
 const Wifecard: React.FC = (): JSX.Element => {
@@ -45,7 +45,7 @@ const Wifecard: React.FC = (): JSX.Element => {
         </View>
       </View>
       <Devider />
-      <Bar />
+      <GBar />
     </View>
   );
 };

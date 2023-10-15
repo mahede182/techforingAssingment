@@ -9,6 +9,9 @@ export default function App() {
     'Poppins': require('./src/assets/fonts/Poppins.ttf'),
     'PoppinsBold': require('./src/assets/fonts/PoppinsBold.ttf')
   });
+
+  if (!fontsLoaded) return null
+
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <SafeAreaView style={styles.container}>
